@@ -1,0 +1,9 @@
+{
+  "name": "sum-ui",
+  "version": "1.0.0",
+  "description": "vue3.x ui",
+  "main": "index.js",
+  "repository": "git@github.com:leitingting08/sum-ui.git",
+  "author": "ltt",
+  "license": "MIT"
+}
