@@ -45,7 +45,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent, toRefs } from 'vue'
 import { ElContainer, ElRow, ElMenu, ElSubMenu, ElMenuItem, ElMenuItemGroup, ElIcon, ElMain, ElFooter } from 'element-plus'
 import Render from './components/Render.vue'

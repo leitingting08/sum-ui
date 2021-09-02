@@ -24,7 +24,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { ElTable, ElTableColumn, ElPagination, ElConfigProvider } from 'element-plus'
 import { defineComponent, toRefs } from 'vue'
 import zhCn from 'element-plus/lib/locale/lang/zh-cn'
@@ -56,14 +56,14 @@ export default defineComponent({
     const { pagenation, columns, data, locale } = toRefs(props)
     const lang = isEmpty(locale.value)
 
-    const handleSelectionChange = (datas: []) => {
+    const handleSelectionChange = (datas) => {
       emit('select-change', datas)
     }
-    const handleSizeChange = (val: number | string) => {
+    const handleSizeChange = (val) => {
       pagenation.value.pageSize = val
       emit('pagenation-change', pagenation.value)
     }
-    const handleCurrentChange = (val: number | string) => {
+    const handleCurrentChange = (val) => {
       pagenation.value.currentPage = val
       emit('pagenation-change', pagenation.value)
     }

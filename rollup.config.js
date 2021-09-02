@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import json from '@rollup/plugin-json';
 import postcss from 'rollup-plugin-postcss';
-import vuePlugin from 'rollup-plugin-vue'
+import vuePlugin from '@vitejs/plugin-vue'
 import { terser } from 'rollup-plugin-terser';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
@@ -27,7 +27,7 @@ const getPlugins = (item) => {
       exclude: 'node_modules/**',
       babelHelpers: 'runtime',
       // babel 默认不支持 ts 需要手动添加
-      extensions: [...DEFAULT_EXTENSIONS, '.ts', 'tsx', '.vue'],
+      extensions: [...DEFAULT_EXTENSIONS, '.ts', 'tsx'],
     }),
     json(),
     postcss({
@@ -66,6 +66,16 @@ module.exports = fs
           name: 'index',
           file: path.resolve(root, item, pkg.main),
           format: 'umd',
+          sourcemap: isDev,
+          globals: {
+            'vue': 'vue',
+            'element-plus': 'element-plus'
+          }
+        },
+        {
+          name: 'index.cjs',
+          file: path.resolve(root, item, pkg.main),
+          format: 'cjs',
           sourcemap: isDev,
           globals: {
             'vue': 'vue',

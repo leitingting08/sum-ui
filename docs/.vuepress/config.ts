@@ -1,6 +1,9 @@
-const { readdirSync } = require('fs')
-const { join } = require('path')
-const chalk = require('chalk')
+
+import { readdirSync } from 'fs'
+import { join } from 'path'
+import chalk from 'chalk'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+import VitePluginElementPlus from 'vite-plugin-element-plus'
 
 const headPkgList = []; // 非 @sum-ui/开头的组件
 
@@ -15,14 +18,12 @@ const alias = pkgList.reduce((pre, pkg) => {
   };
 }, {});
 
-import vueJsx from '@vitejs/plugin-vue-jsx' 
-import VitePluginElementPlus from 'vite-plugin-element-plus'
-
 console.log(`🌼 alias list \n${chalk.blue(Object.keys(alias).join('\n'))}`);
 
 module.exports = {
   title: "sum-ui", // 顶部左侧标题
-  base: "/doc-sum-ui/", // 项目的根路径
+  description: 'Vue3 + ElementPlus 组件库',
+  base: process.env.NODE_ENV === 'production' ?'https://leitingting08.github.io/sum-ui/':'',
   bundler: process.env.NODE_ENV === 'development' ?'@vuepress/vite':'@vuepress/webpack',
   bundlerConfig: {
     viteOptions: {
@@ -32,9 +33,8 @@ module.exports = {
           // 如果你需要使用 [component name].scss 源文件，你需要把下面的注释取消掉。
           // 对于所有的 API 你可以参考 https://github.com/element-plus/vite-plugin-element-plus
           // 的文档注释
-          // useSource: true,
+          useSource: true,
           format: 'esm'
-          // format: process.env.NODE_ENV === 'development' ? 'esm' : 'cjs'
         })
       ]
     }
