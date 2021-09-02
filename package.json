@@ -1,13 +1,10 @@
 {
   "name": "sum-ui",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "workspaces": [
     "packages/*"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/plugin-transform-runtime": "^7.14.5",

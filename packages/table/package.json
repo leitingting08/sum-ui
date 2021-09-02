@@ -3,10 +3,13 @@
   "version": "1.0.3-alpha.0",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "peerDependencies": {
     "element-plus": "^1.1.0-beta.7",
     "vue": "^3.2.6"
   },
-  "gitHead": "3f46a08f8654bcc7c8e54aa494d362b45e286de1"
+  "gitHead": "0b6a4de2356cf50597516cb963b3db596ed84685"
 }
