@@ -1,11 +1,12 @@
 {
   "name": "@sum-ui/layout",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.1-alpha.0",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
   "license": "MIT",
   "peerDependencies": {
     "element-plus": "^1.1.0-beta.7",
     "vue": "^3.2.6"
-  }
+  },
+  "gitHead": "e7292f4d8e71a932a72191450e3b685e9659b06d"
 }
