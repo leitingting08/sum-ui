@@ -1,0 +1,1 @@
+const e={key:"v-89c9a156",path:"/components/form.html",title:"Form",lang:"en-US",frontmatter:{title:"Form",desc:"desc"},excerpt:"",headers:[{level:3,title:"vue preview",slug:"vue-preview",children:[]}],filePathRelative:"components/form.md",git:{updatedTime:null,contributors:[]}};export{e as data};

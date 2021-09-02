@@ -1,59 +1,98 @@
 {
   "name": "sum-ui",
   "private": true,
-  "version": "0.0.2",
-  "main": "lib/index.js",
-  "module": "lib/index.esm.js",
-  "typings": "lib/index.d.ts",
-  "unpkg": "lib/index.js",
-  "style": "lib/theme-chalk/index.css",
-  "vetur": {
-    "tags": "lib/tags.json",
-    "attributes": "lib/attributes.json"
-  },
-  "web-types": "lib/web-types.json",
+  "version": "0.0.0",
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.15.0",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-typescript": "^8.2.1",
+    "@types/jest": "^26.0.23",
+    "@types/lodash": "^4.14.170",
     "@typescript-eslint/eslint-plugin": "^4.28.0",
     "@typescript-eslint/parser": "^4.28.0",
-    "@vitejs/plugin-vue": "^1.2.3",
-    "@vue/compiler-sfc": "^3.1.2",
+    "@vitejs/plugin-vue": "^1.6.0",
+    "@vitejs/plugin-vue-jsx": "^1.1.7",
+    "@vue/babel-plugin-jsx": "^1.0.6",
+    "@vue/compiler-sfc": "^3.2.6",
+    "@vue/component-compiler-utils": "^3.2.2",
+    "@vue/test-utils": "^2.0.0-rc.13",
+    "autoprefixer": "^10.3.3",
+    "babel-jest": "^26.3.0",
+    "babel-plugin-import": "^1.13.3",
+    "chalk": "^4.1.1",
     "cz-conventional-changelog": "^3.3.0",
+    "element-plus": "^1.1.0-beta.7",
     "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.11.1",
     "husky": "^6.0.0",
+    "jest": "^26.6.3",
     "lerna": "^4.0.0",
     "lint-staged": "^11.0.0",
+    "lodash-es": "^4.17.21",
+    "plop": "^2.7.4",
+    "postcss": "^8.3.6",
     "prettier": "^2.3.1",
+    "rollup": "^2.56.3",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0",
     "standard-version": "^9.3.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-recess-order": "^2.4.0",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
+    "ts-jest": "^26.0.0",
+    "tslib": "^2.3.0",
     "typescript": "^4.3.4",
-    "vite": "^2.3.8",
-    "vite-plugin-vuedoc": "^3.1.3",
-    "vue": "^3.1.2",
-    "vuepress": "^2.0.0-beta.19"
+    "vite": "^2.5.1",
+    "vite-plugin-element-plus": "^0.0.12",
+    "vue": "^3.2.6",
+    "vue-jest": "^5.0.0-alpha.10",
+    "vue-loader": "^16.5.0",
+    "vuepress": "^2.0.0-beta.25",
+    "vuepress-plugin-demoblock-plus": "^1.1.1",
+    "vuepress-vite": "^2.0.0-beta.25"
   },
   "license": "MIT",
   "repository": "git@github.com:leitingting08/sum-ui.git",
   "scripts": {
-    "dev": "vite dev",
+    "build": "yarn dist && NODE_ENV=production rollup -c",
+    "build:watch": "rollup -c -w",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "clean": "lerna clean",
+    "dist": "rm -rf ./packages/**/dist",
     "commit": "git-cz",
     "release": "standard-version",
+    "lint": "eslint ./packages --ext .vue,.js,.ts",
+    "lint-fix": "eslint --fix ./packages --ext .vue,.js,.ts",
+    "prettier": "prettier --write ./packages",
     "test": "jest"
-  },
-  "peerDependencies": {
-    "vue": "3.1.2"
   },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "husky": {
     "hooks": {
@@ -64,10 +103,16 @@
   },
   "lint-staged": {
     "*.{js,jsx,less,md,json,vue}": [
-      "prettier --write"
+      "prettier --write",
+      "git add"
+    ],
+    "*.{css,less,sass,scss}": [
+      "stylelint --fix",
+      "git add"
     ],
     "*.ts?(x)": [
-      "prettier --parser=typescript --write"
+      "prettier --parser=typescript --write",
+      "git add"
     ]
   },
   "browserslist": [

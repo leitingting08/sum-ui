@@ -1,0 +1,1 @@
+const e={key:"v-8daa1a0e",path:"/",title:"介绍",lang:"en-US",frontmatter:{title:"介绍"},excerpt:"",headers:[{level:2,title:"技术栈",slug:"技术栈",children:[]},{level:2,title:"组件看板",slug:"组件看板",children:[]}],filePathRelative:"index.md",git:{updatedTime:null,contributors:[]}};export{e as data};
