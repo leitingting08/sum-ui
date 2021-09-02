@@ -32,9 +32,7 @@ const getPlugins = (item) => {
     json(),
     postcss({
       plugins: [
-        require('autoprefixer')({
-          browsers: ['last 2 version', '>1%', 'ios 7']
-        })
+        require('autoprefixer')
       ],
       // Enable CSS modules or set options for postcss-modules.
       modules: true,

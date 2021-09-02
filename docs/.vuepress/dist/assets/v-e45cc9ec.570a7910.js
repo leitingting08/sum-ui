@@ -1,1 +1,0 @@
-const t={key:"v-e45cc9ec",path:"/guide/install.html",title:"安装",lang:"en-US",frontmatter:{title:"安装"},excerpt:"",headers:[],filePathRelative:"guide/install.md",git:{updatedTime:null,contributors:[]}};export{t as data};

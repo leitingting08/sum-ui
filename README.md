@@ -7,6 +7,6 @@ vue3.0 UI
 TODO:
 
 - [x] @sum-ui/layout 布局组件
-- [x] @sum-ui/form 表单组件
 - [x] @sum-ui/table 表格组件
-- [x] @sum-ui/upload 文件上传组件
+- [ ] @sum-ui/upload 文件上传组件
+- [ ] @sum-ui/form 表单组件

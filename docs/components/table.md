@@ -18,7 +18,7 @@ desc: 'desc'
     @select-change="handleSelectionChange"
   >
    <template #operation="scope">
-      <a @click="removeItem(scope.row)"> 删除 </a>
+      <a @click="removeItem(scope.row)" style="cursor:pointer;"> 删除 </a>
     </template>
   </sum-table >
 </template>

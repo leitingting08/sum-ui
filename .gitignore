@@ -1,3 +1,4 @@
 node_modules
 .temp
 .cache
+yarn-error.log

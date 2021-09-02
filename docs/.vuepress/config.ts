@@ -23,18 +23,20 @@ console.log(`🌼 alias list \n${chalk.blue(Object.keys(alias).join('\n'))}`);
 module.exports = {
   title: "sum-ui", // 顶部左侧标题
   base: "/doc-sum-ui/", // 项目的根路径
-  bundler: '@vuepress/vite',
+  bundler: process.env.NODE_ENV === 'development' ?'@vuepress/vite':'@vuepress/webpack',
   bundlerConfig: {
     viteOptions: {
       plugins: [
         vueJsx(),
         VitePluginElementPlus({
-        // 如果你需要使用 [component name].scss 源文件，你需要把下面的注释取消掉。
-        // 对于所有的 API 你可以参考 https://github.com/element-plus/vite-plugin-element-plus
-        // 的文档注释
-        // useSource: true
-        format: 'esm',
-      }),]
+          // 如果你需要使用 [component name].scss 源文件，你需要把下面的注释取消掉。
+          // 对于所有的 API 你可以参考 https://github.com/element-plus/vite-plugin-element-plus
+          // 的文档注释
+          // useSource: true,
+          format: 'esm'
+          // format: process.env.NODE_ENV === 'development' ? 'esm' : 'cjs'
+        })
+      ]
     }
   },
   alias,
@@ -60,7 +62,6 @@ module.exports = {
         {
           text: "介绍",
           children: [
-            { text: "sum-ui 是什么？", link: "/" },
             { text: "安装", link: "/guide/install" },
             { text: "快速上手", link: "/guide/start" },
           ],
@@ -70,8 +71,7 @@ module.exports = {
           children: [
             
             { text: "Layout 布局", link: "/components/layout" },
-            { text: "Table 表格", link: "/components/table" },
-            { text: "Form 表单", link: "/components/form" },
+            { text: "Table 表格", link: "/components/table" }
           ],
         },
       ],
@@ -90,7 +90,5 @@ module.exports = {
     lastUpdatedText: '上次更新',
     contributorsText: '贡献者',
   },
-  plugins: ['demoblock-plus', {
-    theme: 'dark-plus',
-  }]
+  plugins: ['demoblock-plus']
 };

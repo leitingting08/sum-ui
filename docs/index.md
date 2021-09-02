@@ -1,12 +1,11 @@
 ---
 home: true
-heroImage: /logo.png
 actions:
 - text: Get Started
   link: /guide/install.html
   type: primary
-- text: Learn More
-  link: /compoents/layout.html
+- text: Components
+  link: /components/layout.html
   type: secondary
 
 features:
@@ -31,5 +30,5 @@ footer: MIT Licensed | Copyright © 2021-present Summer
 | ---------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | @sum-ui/layout | [![layout](https://img.shields.io/npm/dw/@sum-ui/layout.svg)](https://www.npmjs.com/package/@sum-ui/layout) | [![npm package](https://img.shields.io/npm/v/@sum-ui/layout.svg?style=flat-square?style=flat-square)](https://www.npmjs.com/package/@sum-ui/layout) |
 | @sum-ui/table  | [![table](https://img.shields.io/npm/dw/@sum-ui/table.svg)](https://www.npmjs.com/package/@sum-ui/table)    | [![npm package](https://img.shields.io/npm/v/@sum-ui/table.svg?style=flat-square?style=flat-square)](https://www.npmjs.com/package/@sum-ui/table)   |
-| @sum-ui/field  | [![field](https://img.shields.io/npm/dw/@sum-ui/field.svg)](https://www.npmjs.com/package/@sum-ui/field)    | [![npm package](https://img.shields.io/npm/v/@sum-ui/field.svg?style=flat-square?style=flat-square)](https://www.npmjs.com/package/@sum-ui/field)   |
+| @sum-ui/upload  | [![upload](https://img.shields.io/npm/dw/@sum-ui/upload.svg)](https://www.npmjs.com/package/@sum-ui/upload)    | [![npm package](https://img.shields.io/npm/v/@sum-ui/upload.svg?style=flat-square?style=flat-square)](https://www.npmjs.com/package/@sum-ui/upload)   |
 | @sum-ui/form   | [![form](https://img.shields.io/npm/dw/@sum-ui/form.svg)](https://www.npmjs.com/package/@sum-ui/form)       | [![npm package](https://img.shields.io/npm/v/@sum-ui/layout.svg?style=flat-square?style=flat-square)](https://www.npmjs.com/package/@sum-ui/form)   |

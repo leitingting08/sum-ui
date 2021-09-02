@@ -1,1 +1,0 @@
-const e={key:"v-df88a5ea",path:"/components/table.html",title:"Table",lang:"en-US",frontmatter:{title:"Table",desc:"desc"},excerpt:"",headers:[{level:3,title:"vue preview",slug:"vue-preview",children:[]}],filePathRelative:"components/table.md",git:{updatedTime:null,contributors:[]}};export{e as data};

@@ -4,13 +4,11 @@
  */
 import { defineClientAppEnhance } from '@vuepress/client'
 // -- APPSTART ITEMS HERE --
-import SumForm from '@sum-ui/form'
 import SumTable from '@sum-ui/table'
 import SumLayout from '@sum-ui/layout'
 
 export default defineClientAppEnhance(({ app }) => {
   // -- APPEND ITEMS HERE --
-app.component('SumForm', SumForm)
 app.component('SumTable', SumTable)
 app.component('SumLayout', SumLayout)
 })
