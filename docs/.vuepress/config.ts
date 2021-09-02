@@ -23,6 +23,7 @@ console.log(`🌼 alias list \n${chalk.blue(Object.keys(alias).join('\n'))}`);
 module.exports = {
   title: "sum-ui", // 顶部左侧标题
   description: 'Vue3 + ElementPlus 组件库',
+  base: '/sum-ui/',
   bundler: process.env.NODE_ENV === 'development' ?'@vuepress/vite':'@vuepress/webpack',
   bundlerConfig: {
     viteOptions: {
