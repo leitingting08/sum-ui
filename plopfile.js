@@ -38,6 +38,11 @@ module.exports = (plop) => {
         templateFile: 'templates/package.hbs',
       },
       {
+        type: 'add',
+        path: 'packages/{{name}}/README.md',
+        templateFile: 'templates/README.hbs',
+      },
+      {
         type: 'append',
         path: 'docs/.vuepress/declare.ts',
         pattern: /(\/\/ -- APPDECLARE ITEMS HERE --)/gi,
