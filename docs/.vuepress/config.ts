@@ -24,18 +24,19 @@ module.exports = {
   title: "sum-ui", // 顶部左侧标题
   description: 'Vue3 + ElementPlus 组件库',
   base: '/sum-ui/',
-  bundler: process.env.NODE_ENV === 'development' ?'@vuepress/vite':'@vuepress/webpack',
+  bundler: '@vuepress/vite',
   bundlerConfig: {
     viteOptions: {
       plugins: [
         vueJsx(),
-        VitePluginElementPlus({
-          // 如果你需要使用 [component name].scss 源文件，你需要把下面的注释取消掉。
-          // 对于所有的 API 你可以参考 https://github.com/element-plus/vite-plugin-element-plus
-          // 的文档注释
-          useSource: true,
-          format: 'esm'
-        })
+        // TODO: dev正常，一加按需加载 build打包就报错
+        // VitePluginElementPlus({
+        //   // 如果你需要使用 [component name].scss 源文件，你需要把下面的注释取消掉。
+        //   // 对于所有的 API 你可以参考 https://github.com/element-plus/vite-plugin-element-plus
+        //   // 的文档注释
+        //   useSource: true,
+        //   format: process.env.NODE_ENV === 'development' ?'esm':'cjs'
+        // })
       ]
     }
   },

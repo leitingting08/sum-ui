@@ -29,7 +29,7 @@ import { ElTable, ElTableColumn, ElPagination, ElConfigProvider } from 'element-
 import { defineComponent, toRefs } from 'vue'
 import zhCn from 'element-plus/lib/locale/lang/zh-cn'
 import Render from './components/Render.vue'
-import { isEmpty } from 'lodash-es'
+import isEmpty from 'lodash/isEmpty'
 
 export default defineComponent({
   name: 'sum-table',

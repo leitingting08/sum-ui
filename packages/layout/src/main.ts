@@ -1,5 +1,4 @@
 import { App } from 'vue'
-import 'element-plus/theme-chalk/src/base.scss'
 import Layout from './Index.vue'
 
 Layout.install = (app: App): void => {

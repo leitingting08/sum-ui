@@ -8,7 +8,6 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "element-plus": "^1.1.0-beta.7",
     "vue": "^3.2.6"
   },
   "gitHead": "0b6a4de2356cf50597516cb963b3db596ed84685"
