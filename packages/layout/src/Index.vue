@@ -51,7 +51,7 @@ import { ElContainer, ElRow, ElMenu, ElSubMenu, ElMenuItem, ElMenuItemGroup, ElI
 import Render from './components/Render.vue'
 
 export default defineComponent({
-  name: 'sum-layout',
+  name: 'SumLayout',
   components: {
     ElContainer,
     ElRow,

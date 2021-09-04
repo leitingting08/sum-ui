@@ -32,7 +32,7 @@ import Render from './components/Render.vue'
 import isEmpty from 'lodash/isEmpty'
 
 export default defineComponent({
-  name: 'sum-table',
+  name: 'SumTable',
   components: { ElTable, ElTableColumn, ElPagination, Render, ElConfigProvider },
   props: {
     ...ElTable.props,

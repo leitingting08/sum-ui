@@ -8,7 +8,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'sum-{{name}}',
+  name: 'Sum{{hump name}}',
   setup() {}
 })
 </script>

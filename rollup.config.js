@@ -5,7 +5,7 @@ import postcss from 'rollup-plugin-postcss';
 import vuePlugin from '@vitejs/plugin-vue'
 import { terser } from 'rollup-plugin-terser';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
-import typescript from '@rollup/plugin-typescript';
+import typescript from 'rollup-plugin-typescript2';
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import { DEFAULT_EXTENSIONS } from '@babel/core';
@@ -13,15 +13,16 @@ import { DEFAULT_EXTENSIONS } from '@babel/core';
 const isDev = process.env.NODE_ENV !== 'production';
 // packages 文件夹路径
 const root = path.resolve(__dirname, 'packages');
-console.log(root, fs
-  .readdirSync(root))
 
 // 公共插件配置
 const getPlugins = (item) => {
   return [
-    vuePlugin(),
     typescript(),
-    nodeResolve(),
+    vuePlugin(),
+    nodeResolve({
+      mainField: ['jsnext:main', 'browser', 'module', 'main'],
+      browser: true,
+    }),
     commonjs(),
     babel({
       exclude: 'node_modules/**',
@@ -73,16 +74,6 @@ module.exports = fs
           }
         },
         {
-          name: 'index.cjs',
-          file: path.resolve(root, item, pkg.main),
-          format: 'cjs',
-          sourcemap: isDev,
-          globals: {
-            'vue': 'vue',
-            'element-plus': 'element-plus'
-          }
-        },
-        {
           name: 'index.module',
           file: path.join(root, item, pkg.module),
           format: 'es',
@@ -103,8 +94,8 @@ module.exports = fs
         console.error(`(!) ${warning.message}`);
       },
       plugins: getPlugins(item),
-      external: Object.keys(
-        require(path.join(root, item, 'package.json'))?.peerDependencies || {},
-      )
+      // external: Object.keys(
+      //   require(path.join(root, item, 'package.json'))?.peerDependencies || {},
+      // )
     };
   });
