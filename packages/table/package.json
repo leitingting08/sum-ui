@@ -1,6 +1,6 @@
 {
   "name": "@sum-ui/table",
-  "version": "1.0.0",
+  "version": "1.0.7-alpha.0",
   "description": "基于 Vue3.x + ElementPlus 的组件库",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
