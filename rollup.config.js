@@ -94,8 +94,8 @@ module.exports = fs
         console.error(`(!) ${warning.message}`);
       },
       plugins: getPlugins(item),
-      // external: Object.keys(
-      //   require(path.join(root, item, 'package.json'))?.peerDependencies || {},
-      // )
+      external: Object.keys(
+        require(path.join(root, item, 'package.json'))?.peerDependencies || {},
+      )
     };
   });

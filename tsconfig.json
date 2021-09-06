@@ -7,7 +7,7 @@
     "esModuleInterop": true,
     "jsx": "preserve",
     "noLib": false,
-    "target": "es5",
+    "target": "esnext",
     "sourceMap": true,
     "lib": ["ESNext", "DOM"],
     "allowSyntheticDefaultImports": true,
