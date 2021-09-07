@@ -3,7 +3,7 @@ import { readdirSync } from 'fs'
 import { join } from 'path'
 import chalk from 'chalk'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import VitePluginElementPlus from 'vite-plugin-element-plus'
+// import VitePluginElementPlus from 'vite-plugin-element-plus'
 
 const headPkgList = []; // 非 @sum-ui/开头的组件
 

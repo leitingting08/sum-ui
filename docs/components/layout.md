@@ -57,12 +57,12 @@ export default defineComponent({
               {
                 title: '数据',
                 auth: 'menu/data',
-                path: '/menu/data'
+                // path: '/menu/data'
               },
               {
                 title: '分析',
                 auth: 'menu/analysis',
-                path: '/menu/analysis'
+                // path: '/menu/analysis'
               }
             ]
           }

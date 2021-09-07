@@ -20,9 +20,10 @@
                 <template #title><i :class="icon" v-if="icon"></i><span v-if="!menuProps.collapse">{{ title }}</span></template>
                 <template v-if="children && children.length">
                     <el-menu-item-group v-for="(sub,subindex) in children" :key="subindex">
-                        <router-link :to="sub.path">
+                        <router-link :to="sub.path" v-if="sub.path">
                           <el-menu-item :index="`${index}-${subindex}`">{{ sub.title }}</el-menu-item>
                         </router-link>
+                         <el-menu-item v-else :index="`${index}-${subindex}`">{{ sub.title }}</el-menu-item>
                     </el-menu-item-group>
                 </template>
             </el-sub-menu>
