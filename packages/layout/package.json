@@ -1,12 +1,13 @@
 {
   "name": "@sum-ui/layout",
-  "version": "1.0.8-alpha.0",
+  "version": "1.0.0",
   "description": "基于 Vue3.x + ElementPlus 的组件库",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
   "author": "ltt",
   "files": [
-    "dist"
+    "dist",
+    "README"
   ],
   "homepage": "https://leitingting08.github.io/sum-ui",
   "repository": {
