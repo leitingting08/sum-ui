@@ -100,6 +100,9 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+.el-row::before, .el-row::after {
+  display: none!important;;
+}
 .sider {
   height: 100vh;
   .el-menu {

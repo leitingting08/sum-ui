@@ -35,8 +35,6 @@ const getPlugins = (item) => {
       plugins: [
         require('autoprefixer')
       ],
-      // Enable CSS modules or set options for postcss-modules.
-      modules: true,
       // 把 css 插入到 style 中
       inject: true,
       // 把 css 放到和js同一目录
