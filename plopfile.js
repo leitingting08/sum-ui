@@ -44,7 +44,7 @@ module.exports = (plop) => {
       },
       {
         type: 'append',
-        path: 'docs/.vuepress/declare.ts',
+        path: 'typings/vue-shim.d.ts',
         pattern: /(\/\/ -- APPDECLARE ITEMS HERE --)/gi,
         template: "declare module '@sum-ui/{{name}}'",
       },

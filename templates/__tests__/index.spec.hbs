@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
-import Sum{{hump name}} from '../src/Index.vue'
+import Sum{{hump name}} from '@sum-ui/{{name}}'
 
 describe('@sum-ui/{{name}}', () => {
   it('create', () => {
-    const wrapper = mount(SumLayout)
+    const wrapper = mount(Sum{{hump name}})
     expect(wrapper.classes()).toContain('sum-{{name}}')
   })
 })

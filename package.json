@@ -79,7 +79,7 @@
     "lint": "eslint ./packages --ext .vue,.js,.ts",
     "lint-fix": "eslint --fix ./packages --ext .vue,.js,.ts",
     "prettier": "prettier --write ./packages",
-    "test": "jest",
+    "test": "jest --coverage",
     "deploy": "yarn build && lerna publish"
   },
   "config": {

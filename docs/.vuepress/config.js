@@ -1,36 +1,11 @@
 
-import { readdirSync } from 'fs'
-import { join } from 'path'
-import chalk from 'chalk'
-import vueJsx from '@vitejs/plugin-vue-jsx'
-
-const headPkgList = []; // 非 @sum-ui/开头的组件
-
-const pkgList = readdirSync(join(__dirname, '../../packages')).filter(
-  (pkg) => pkg.charAt(0) !== '.' && !headPkgList.includes(pkg),
-);
-
-const alias = pkgList.reduce((pre, pkg) => {
-  pre[`@sum-ui/${pkg}`] = join(__dirname, '../../packages', pkg, 'src/Index.vue');
-  return {
-    ...pre,
-  };
-}, {});
-
-console.log(`🌼 alias list \n${chalk.blue(Object.keys(alias).join('\n'))}`);
+const alias = require('../../alias')
 
 module.exports = {
   title: "sum-ui", // 顶部左侧标题
   description: 'Vue3 + ElementPlus 组件库',
   base: '/sum-ui/',
   bundler: '@vuepress/vite',
-  bundlerConfig: {
-    viteOptions: {
-      plugins: [
-        vueJsx()
-      ]
-    }
-  },
   alias,
   head: [
     // 设置 描述 和 关键词

@@ -4,7 +4,6 @@
  */
 import { defineClientAppEnhance } from '@vuepress/client'
 import 'element-plus/theme-chalk/src/index.scss'
-
 // -- APPSTART ITEMS HERE --
 import SumTable from '@sum-ui/table'
 import SumLayout from '@sum-ui/layout'
