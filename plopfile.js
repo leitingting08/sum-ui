@@ -44,8 +44,8 @@ module.exports = plop => {
             },
             {
                 type: 'add',
-                path: 'packages/{{name}}/sum-ui.d.ts',
-                templateFile: 'templates/sum-ui.d.ts'
+                path: 'packages/{{name}}/typings/sum-ui.d.ts',
+                templateFile: 'templates/typings/sum-ui.d.ts'
             },
             {
                 type: 'append',

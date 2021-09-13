@@ -4,11 +4,11 @@
     "description": "基于 Vue3.x + ElementPlus 的组件库",
     "main": "dist/index.js",
     "module": "dist/index.module.js",
-    "typings": "sum-ui.d.ts",
+    "typings": "typings/sum-ui.d.ts",
     "author": "ltt",
     "files": [
         "dist",
-        "sum-ui.d.ts",
+        "typings",
         "README"
     ],
     "homepage": "https://leitingting08.github.io/sum-ui",
