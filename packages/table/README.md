@@ -12,7 +12,7 @@ yarn add @sum-ui/table
 
 ```vue
 <template>
- <sum-table/>
+    <sum-table />
 </template>
 
 <script lang="ts">
@@ -20,8 +20,8 @@ import { defineComponent, toRefs } from 'vue'
 import SumTable from '@sum-ui/table'
 
 export default defineComponent({
-  components: { SumTable },
-  setup() {}
+    components: { SumTable },
+    setup() {}
 })
 </script>
 ```

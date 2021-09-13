@@ -12,7 +12,7 @@ yarn add @sum-ui/layout
 
 ```vue
 <template>
- <sum-layout/>
+    <sum-layout />
 </template>
 
 <script lang="ts">
@@ -20,8 +20,8 @@ import { defineComponent, toRefs } from 'vue'
 import SumLayout from '@sum-ui/layout'
 
 export default defineComponent({
-  components: { SumLayout },
-  setup() {}
+    components: { SumLayout },
+    setup() {}
 })
 </script>
 ```

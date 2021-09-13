@@ -7,19 +7,12 @@
     "esModuleInterop": true,
     "jsx": "preserve",
     "noLib": false,
-    "target": "esnext",
+    "target": "es5",
     "sourceMap": true,
     "lib": ["ESNext", "DOM"],
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true
-  },
-  "exclude": [
-    "node_modules",
-    "dist/**",
-    "packages/*/__tests__",
-    "packages/*/es",
-    "packages/*/lib"
-  ]
+  }
 }

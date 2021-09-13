@@ -1,36 +1,39 @@
 {
-  "name": "@sum-ui/table",
-  "version": "1.0.0",
-  "description": "基于 Vue3.x + ElementPlus 的组件库",
-  "main": "dist/index.js",
-  "module": "dist/index.module.js",
-  "author": "ltt",
-  "files": [
-    "dist",
-    "README"
-  ],
-  "homepage": "https://leitingting08.github.io/sum-ui",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/leitingting08/sum-ui"
-  },
-  "bugs": {
-    "url": "https://github.com/leitingting08/sum-ui/issues"
-  },
-  "keywords": [
-    "vue3",
-    "element-plus",
-    "components",
-    "lerna",
-    "rollup",
-    "vuepress"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "license": "MIT",
-  "peerDependencies": {
-    "vue": "^3.2.8"
-  },
-  "gitHead": "fadd15bf6f087edb3b8e1f7cc0b9e804ade02101"
+    "name": "@sum-ui/table",
+    "version": "1.0.0",
+    "description": "基于 Vue3.x + ElementPlus 的组件库",
+    "main": "dist/index.js",
+    "module": "dist/index.module.js",
+    "author": "ltt",
+    "files": [
+        "dist",
+        "README"
+    ],
+    "homepage": "https://leitingting08.github.io/sum-ui",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/leitingting08/sum-ui"
+    },
+    "bugs": {
+        "url": "https://github.com/leitingting08/sum-ui/issues"
+    },
+    "keywords": [
+        "vue3",
+        "element-plus",
+        "components",
+        "lerna",
+        "rollup",
+        "vuepress"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "license": "MIT",
+    "peerDependencies": {
+        "vue": "^3.2.8"
+    },
+    "engines": {
+        "node": ">=12"
+    },
+    "gitHead": "fadd15bf6f087edb3b8e1f7cc0b9e804ade02101"
 }
