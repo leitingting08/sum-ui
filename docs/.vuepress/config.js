@@ -21,6 +21,20 @@ module.exports = {
           "此框架使用与二次开发，前端框架使用 Vue3，UI 框架使用 element-plus，全局数据状态管理使用 vuex，ajax 使用库为 axios。用于快速搭建中后台页面。",
       },
     ],
+    // 添加百度统计
+    [
+      "script",
+      {},
+      `
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?09606fe130f768bfb1c3be82fdf56339";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+        `
+    ]
   ],
   themeConfig: {
     sidebar: {
