@@ -3,6 +3,7 @@
 .temp
 .cache
 .DS_Store
+pacakges/.DS_Store
 node_modules
 /dist
 /deploy
