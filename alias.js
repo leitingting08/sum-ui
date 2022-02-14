@@ -7,7 +7,7 @@ const pkgList = readdirSync(join(__dirname, './packages')).filter(
     pkg => pkg.charAt(0) !== '.' && !headPkgList.includes(pkg)
 )
 const alias = pkgList.reduce((pre, pkg) => {
-    pre[`@sum-ui/${pkg}`] = join(__dirname, './packages', pkg, 'src/Index.vue')
+    pre[`@sum-ui/${pkg}`] = join(__dirname, './packages', pkg, 'src/main.ts')
     return {
         ...pre
     }

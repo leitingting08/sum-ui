@@ -9,6 +9,9 @@ import typescript from '@rollup/plugin-typescript'
 import babel from '@rollup/plugin-babel'
 import commonjs from '@rollup/plugin-commonjs'
 import { DEFAULT_EXTENSIONS } from '@babel/core'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 const isDev = process.env.NODE_ENV !== 'production'
 // packages 文件夹路径
@@ -18,6 +21,12 @@ const root = path.resolve(__dirname, 'packages')
 const getPlugins = () => {
     return [
         vue(),
+        AutoImport({
+            resolvers: [ElementPlusResolver()]
+        }),
+        Components({
+            resolvers: [ElementPlusResolver()]
+        }),
         typescript({
             tsconfig: './tsconfig.json'
         }),
