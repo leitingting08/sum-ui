@@ -73,10 +73,10 @@
   "license": "MIT",
   "repository": "git@github.com:leitingting08/sum-ui.git",
   "scripts": {
-    "build": "yarn dist && NODE_ENV=production rollup -c",
+    "build": "yarn dist && cross-env NODE_ENV=production rollup -c",
     "build:watch": "rollup -c -w",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "NODE_ENV=production vuepress build docs",
+    "docs:build": "cross-env NODE_ENV=production vuepress build docs",
     "clean": "lerna clean",
     "dist": "rm -rf ./packages/**/dist",
     "commit": "git-cz",

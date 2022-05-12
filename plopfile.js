@@ -49,13 +49,13 @@ module.exports = plop => {
             },
             {
                 type: 'append',
-                path: 'docs/.vuepress/clientAppEnhance.ts',
+                path: 'docs/.vuepress/clientAppEnhance.js',
                 pattern: /(\/\/ -- APPSTART ITEMS HERE --)/gi,
                 template: "import Sum{{hump name}} from '@sum-ui/{{name}}'"
             },
             {
                 type: 'append',
-                path: 'docs/.vuepress/clientAppEnhance.ts',
+                path: 'docs/.vuepress/clientAppEnhance.js',
                 pattern: /(\/\/ -- APPEND ITEMS HERE --)/gi,
                 template: "app.component('Sum{{hump name}}', Sum{{hump name}})"
             }

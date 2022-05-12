@@ -21,3 +21,11 @@ npm i @sum-ui/table
 # or
 yarn add @sum-ui/table
 ```
+
+## @sum-ui/upload
+
+```bash
+npm i @sum-ui/upload
+# or
+yarn add @sum-ui/upload
+```

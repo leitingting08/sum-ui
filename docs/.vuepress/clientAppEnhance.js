@@ -5,11 +5,13 @@
 import { defineClientAppEnhance } from '@vuepress/client'
 import 'element-plus/theme-chalk/src/index.scss'
 // -- APPSTART ITEMS HERE --
+import SumUpload from '@sum-ui/upload'
 import SumTable from '@sum-ui/table'
 import SumLayout from '@sum-ui/layout'
 
 export default defineClientAppEnhance(({ app }) => {
   // -- APPEND ITEMS HERE --
+app.component('SumUpload', SumUpload)
 app.component('SumTable', SumTable)
 app.component('SumLayout', SumLayout)
 })

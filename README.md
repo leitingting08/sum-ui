@@ -36,11 +36,17 @@ npm run build
 yarn build
 ```
 
+## add dev component
+
+```bash
+yarn plop <componentName>
+```
+
 [组件库交互文档](https://leitingting08.github.io/sum-ui/)
 
 TODO:
 
-- [x] @sum-ui/layout 布局组件
-- [x] @sum-ui/table 表格组件
-- [ ] @sum-ui/upload 文件上传组件
-- [ ] @sum-ui/form 表单组件
+-   [x] @sum-ui/layout 布局组件
+-   [x] @sum-ui/table 表格组件
+-   [x] @sum-ui/upload 文件上传组件
+-   [x] @sum-ui/form 表单组件
