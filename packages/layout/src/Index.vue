@@ -70,7 +70,7 @@ import { ElContainer, ElRow, ElMenu, ElSubMenu, ElMenuItem, ElMenuItemGroup, ElM
 import Render from './components/Render.vue'
 
 export default defineComponent({
-    name: 'SumLayout',
+    name: 'sum-layout',
     components: {
         ElContainer,
         ElRow,

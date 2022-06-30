@@ -2,8 +2,9 @@
 
 vue3.0 UI
 
-基于 Vue3.x + element-plus + Sass 封装的基础组件库
+基于 Vue3.x + element-plus + Scss 封装的基础组件库
 
+添加了 tailwindcss 支持
 ## install
 
 ```bash

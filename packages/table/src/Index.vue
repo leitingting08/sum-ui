@@ -21,8 +21,6 @@
             >
             </el-pagination>
         </el-config-provider>
-        <button type="button" class="py-2 px-4 bg-red-500 text-white font-semibold rounded-lg shadow-md">button</button>
-        <span class="text-gray-700 hover:text-primary">I am a span</span>
     </div>
 </template>
 
@@ -34,7 +32,7 @@ import Render from './components/Render.vue'
 import isEmpty from 'lodash/isEmpty'
 
 export default defineComponent({
-    name: 'SumTable',
+    name: 'sum-table',
     components: { ElTable, ElTableColumn, ElPagination, Render, ElConfigProvider },
     props: {
         ...ElTable.props,

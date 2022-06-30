@@ -1,5 +1,7 @@
 const alias = require('../../alias')
 const { viteBundler } = require('@vuepress/bundler-vite')
+const { defaultTheme } = require('@vuepress/theme-default')
+const demoblockPlugin = require('vuepress-plugin-demoblock-plus')
 
 module.exports = {
     title: 'sum-ui', // 顶部左侧标题
@@ -41,7 +43,7 @@ module.exports = {
         `
         ]
     ],
-    themeConfig: {
+    theme: defaultTheme({
         sidebar: {
             // 侧边栏
             '/': [
@@ -61,7 +63,7 @@ module.exports = {
                 }
             ]
         },
-        nav: [
+        navbar: [
             // 顶部右侧导航栏
             { text: '介绍', link: '/', activeMatch: '^/$|^/guide/' },
             {
@@ -74,6 +76,18 @@ module.exports = {
         editLinkText: '在 GitHub 上编辑此页',
         lastUpdatedText: '上次更新',
         contributorsText: '贡献者'
-    },
-    plugins: [['vuepress-plugin-demoblock-plus']]
+    }),
+    plugins: [
+        demoblockPlugin({
+            customClass: 'demoblock-custom',
+            theme: 'github-light',
+            cssPreprocessor: 'scss',
+            scriptReplaces: [
+                {
+                    searchValue: /const ({ defineComponent as _defineComponent }) = Vue/g,
+                    replaceValue: 'const { defineComponent: _defineComponent } = Vue'
+                }
+            ]
+        })
+    ]
 }

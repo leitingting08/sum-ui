@@ -35,7 +35,7 @@ export default defineComponent({
         headerTitle: {
           slot: 'title'
         },
-        // headerTitle: () => 
+        // headerTitle: () =>
         //        <div class="title">
         //           <img
         //             src="./logo.png"
